@@ -15,4 +15,18 @@ jobs:
         uses: actions/checkout@v4
       - name: Build firmware
         run: make build
+      - name: Run firmware
+        run: make run
+      - name: Collect artifacts in artifacts/
+        run: |
+          mkdir -p artifacts
+          mv firmware artifacts
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v7
+        with: 
+          path: artifacts
+          name: firmware
+          if-no-files-found: error
+          retention-days: 3
+
  
