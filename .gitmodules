@@ -1,3 +1,6 @@
 [submodule "yrgo-test"]
 	path = yrgo-test
 	url = https://github.com/yrgo-libs/yrgo-test
+[submodule "libs/test"]
+	path = libs/test
+	url = https://github.com/yrgo-libs/yrgo-test
